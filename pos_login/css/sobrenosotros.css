@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+
+.campo{
+    position: relative;
+    background-color: black;
+    height: 50vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(233, 221, 221, 0.5),
+        rgba(16, 151, 39, 0.5)
+    )
+    ,url(/pos_login/images/productividad.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+h2{
+    
+    text-align: center;
+    margin: auto;
+    font-size: 2rem;
+    color: rgb(6, 36, 36);
+}
