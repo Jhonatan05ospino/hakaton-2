@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planificador de Cultivos Interactivo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Planificador de Cultivos</h1>
+  </header>
+
+  <main>
+    <!-- Calendario -->
+    <section id="calendario">
+      <div class="calendar-controls">
+        <button id="prev-month">←</button>
+        <h2 id="month-name">Enero 2024</h2>
+        <button id="next-month">→</button>
+      </div>
+      <div id="calendar"></div>
+    </section>
+
+    <!-- Gestión de Cultivos -->
+    <section id="cultivos">
+      <h2>Gestión de Cultivos</h2>
+      <ul id="cultivos-list">
+        <!-- Los cultivos se agregarán aquí dinámicamente -->
+      </ul>
+      <button id="add-cultivo">Agregar Cultivo</button>
+    </section>
+
+    <!-- Botón para Mostrar Eventos -->
+    <section id="mostrar-eventos">
+      <button id="mostrar-eventos-btn">Mostrar Eventos</button>
+    </section>
+
+    <!-- Tabla de Eventos -->
+    <section id="tabla-eventos" class="hidden">
+      <h2>Eventos de Siembra</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Cultivo</th>
+            <th>Área (m²)</th>
+            <th>Fecha de Siembra</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-eventos-body">
+          <!-- Los eventos se mostrarán aquí dinámicamente -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Formulario para Agregar Siembra -->
+    <section id="formulario" class="hidden">
+      <h3>Planificar Siembra</h3>
+      <form id="planificar-form">
+        <label for="cultivo">Seleccionar Cultivo:</label>
+        <select id="cultivo">
+          <option value="maiz">Maíz</option>
+          <option value="tomate">Tomate</option>
+          <option value="lechuga">Lechuga</option>
+          <option value="lechuga">Lechuga</option>
+          <option value="tomate">Tomate</option>
+          <option value="zanahoria">Zanahoria</option>
+          <option value="pepino">Pepino</option>
+          <option value="espinaca">Espinaca</option>
+          <option value="brocoli">Brócoli</option>
+          <option value="coliflor">Coliflor</option>
+          <option value="pimiento">Pimiento</option>
+          <option value="cebolla">Cebolla</option>
+          <option value="ajos">Ajos</option>
+          <option value="fresa">Fresa</option>
+          <option value="berenjena">Berenjena</option>
+          <option value="calabaza">Calabaza</option>
+          <option value="sandia">Sandía</option>
+          <option value="melon">Melón</option>
+          <option value="papa">Papa</option>
+          <option value="maiz">Maíz</option>
+          <option value="arroz">Arroz</option>
+          <option value="guisante">Guisante</option>
+          <option value="albahaca">Albahaca</option>
+          <option value="cilantro">Cilantro</option>
+          <option value="romero">Romero</option>
+          <option value="perejil">Perejil</option>
+          <option value="menta">Menta</option>
+
+        </select>
+        <label for="area">Área (m²):</label>
+        <input type="number" id="area" min="1" required>
+        <label for="fecha">Fecha de Siembra:</label>
+        <input type="date" id="fecha" required>
+        <button type="submit">Agregar</button>
+        <button type="button" id="cancelar">Cancelar</button>
+      </form>
+    </section>
+
+    <!-- Formulario para Editar Siembra -->
+    <section id="edit-formulario" class="hidden">
+      <h3>Editar Siembra</h3>
+      <form id="edit-form">
+        <label for="edit-cultivo">Cultivo:</label>
+        <select id="edit-cultivo">
+          <option value="maiz">Maíz</option>
+          <option value="tomate">Tomate</option>
+          <option value="lechuga">Lechuga</option>
+        </select>
+        <label for="edit-area">Área (m²):</label>
+        <input type="number" id="edit-area" min="1" required>
+        <label for="edit-fecha">Fecha de Siembra:</label>
+        <input type="date" id="edit-fecha" required>
+        <button type="submit">Actualizar</button>
+        <button type="button" id="cancelar-editar">Cancelar</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
